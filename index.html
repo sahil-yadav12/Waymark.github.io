@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waymark — assistive walking guidance prototype</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to Waymark</a>
+  <header class="mast">
+    <p class="eyebrow">Accessibility-first UI/UX case study</p>
+    <h1>Waymark</h1>
+    <p class="lede">A voice-first walking guide for blind and low-vision pedestrians. The phone is a clickable prototype. It uses scripted places around MG Road, Bengaluru. It does not track live GPS, read a camera, detect obstacles, or contact anyone.</p>
+  </header>
+  <div class="layout">
+    <div class="stage">
+      <div class="phone-shell" aria-hidden="false">
+        <div id="phone" data-theme="light" data-wire="false" data-large="false">
+          <div id="app"></div>
+        </div>
+      </div>
+      <p class="frame-note">High-contrast phone frame. Text inside the app is the interface, not a picture of one.</p>
+    </div>
+    <aside class="board" aria-label="Prototype guide">
+      <section>
+        <h2>On this screen</h2>
+        <p id="c-kicker" class="eyebrow"></p>
+        <p id="c-title" class="board-title"></p>
+        <p id="c-note"></p>
+        <h3>Announcement</h3>
+        <p id="c-say"></p>
+        <div class="board-actions" id="c-actions"></div>
+      </section>
+      <section>
+        <h2>Prototype controls</h2>
+        <p>These sit outside the product UI so the phone stays free of tester-only clutter.</p>
+        <div class="board-actions" id="c-sim"></div>
+      </section>
+      <section>
+        <h2>Screens</h2>
+        <div id="c-nav"></div>
+      </section>
+    </aside>
+  </div>
+  <div id="polite" class="sr-only" aria-live="polite"></div>
+  <div id="assertive" class="sr-only" aria-live="assertive"></div>
+  <script src="app.js"></script>
+</body>
+</html>
